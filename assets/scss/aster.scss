@@ -1,0 +1,89 @@
+/**
+*
+* Normalize
+* Animate
+* Font Awesome Icons
+* Bootstrap
+* Owl Carousel
+* Owl Carousel Theme
+* Owl Carousel Theme Green
+* Variables
+* Mixins
+* Base 
+* Typography styles
+* Button
+* Badge
+* Form
+* Modal
+* Tabs
+* Tables
+* Paginations
+* Sliders and Carousel
+* Accordion
+* Header
+* Navigation
+* Footer
+* Common
+* Landing
+*
+**/
+/* plugins css import start*/
+/*  Normalize css  */
+@import '../plugins/normalize.css.8.0.1/normalize.css';
+/*  Animate css  */
+@import '../plugins/animate.css.4.1.1/animate.min.css';
+/*  Font Awesome icons css  */
+@import '../plugins/fontawesome-free-5.14.0/css/all.min.css';
+/*  Bootstrap icons css  */
+@import '../plugins/bootstrap-4.6.1/css/bootstrap.min.css';
+/*  Owl Carousel css  */
+@import '../plugins/owl-carousel2-2.3.4/assets/owl.carousel.min.css';
+/*  Owl Carousel Theme css  */
+@import '../plugins/owl-carousel2-2.3.4/assets/owl.theme.default.min.css';
+/*  Owl Carousel Theme Green css  */
+@import '../plugins/owl-carousel2-2.3.4/assets/owl.theme.green.min.css';
+/* plugins css import end*/
+/* common */
+/*  Theme Variables*/
+@import './inc/variables';
+/*  Theme Mixins used*/
+@import './inc/mixins';
+/*  Base styles */
+@import './inc/base';
+/*  Typography styles */
+@import './inc/typography';
+/*  Button styles */
+@import './component/buttons';
+/*  Badge styles */
+@import './component/badge';
+/*  Form styles */
+@import './component/forms';
+/*  Custom Modal styles  */
+@import './component/modal';
+/*  Custom Tab styles  */
+@import './component/tabs';
+/*  Card Tab styles  */
+@import './component/card';
+/*  Custom Table styles  */
+@import './component/tables';
+/*  Paginations styles  */
+@import './component/pagination';
+/*  Sliders and Carousel css  */
+@import './component/sliders';
+/*  Accordion css  */
+@import './component/accordion';
+/*  Testimonials css  */
+@import './component/testimonials';
+/*  Header css  */
+@import './component/header';
+/*  Navigation css  */
+@import './component/navigation';
+/*  Footer css  */
+@import './component/footer';
+/*  Each Sections Common css  */
+/* pages */
+/*  Common us css  */
+@import './pages/common';
+/*  Landing css  */
+@import './pages/landing';
+/* end of the style document */

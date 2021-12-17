@@ -1,0 +1,151 @@
+.form-group {
+    label {
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+        color: #666666;
+        @extend .font-regular;
+    }
+}
+
+.custom-control-label a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+        color: $primary-color;
+    }
+}
+
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+    border-color: lighten($primary-color, 5%);
+    background-color: lighten($primary-color, 5%);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea {
+    border: 1px solid #D0D0D0;
+    background-color: #fff;
+    min-height: 44px;
+    @include animate(all 0.6s ease);
+    color: $text-color;
+    @include border-radius(5px);
+    font-size: 15px;
+    padding: 15px;
+    font-weight: $font-regular;
+    @include placeholder(#213559, 16px, $font-bold);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.5);
+    }
+}
+
+select.form-control {
+    position: relative;
+    display: block;
+    @include border-radius(6px);
+    padding: 0 16px;
+    padding-right: 35px;
+    appearance: none;
+    -webkit-appearance: none;
+    background:#F3F4F9 url(#{$img-path}icons/select-drop-dark.png) right 15px center no-repeat;
+    cursor: pointer;
+    width: 100%;
+}
+
+textarea.form-control {
+    padding-top: 20px;
+    @include border-radius(6px);
+}
+
+
+.custom-control {
+    .custom-control-label {
+        cursor: pointer;
+        font-size: 16px;
+        @extend .font-regular;
+        line-height: 25px;
+        color: $text-color;
+    }
+
+    &--lg {
+        .custom-control-label {
+
+            &::after,
+            &::before {
+                width: 1.5rem;
+                height: 1.5rem;
+                top: 0;
+            }
+        }
+    }
+}
+
+.upload-btn {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+    min-height: 40px;
+    border-color: $btn-dark-normal;
+    background-color: $btn-dark-normal;
+    color: $btn-dark-default-text-color;
+    font-weight: $font-bold;
+    @include border-radius(100px);
+    @include animate(all 0.25s ease-in);
+    font-size: 16px;
+    padding: 10px 20px;
+    line-height: 20px;
+    max-width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+    input[type="file"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $btn-dark-hover;
+        border-color: $btn-dark-hover;
+        color: $btn-dark-hover-text-color;
+    }
+
+    &:disabled,
+    &.disabled,
+    &[disabled] {
+        border-color: $btn-dark-disabled;
+        background-color: $btn-dark-disabled;
+        color: $btn-dark-disabled-hover-text-color;
+    }
+}
+
+.input-group{
+    flex-wrap: nowrap;
+     .form-control{
+        @include border-radius(5px 0 0 5px);
+     }
+     .btn{
+        @include border-radius(0 5px 5px 0px);
+     }
+}

@@ -1,0 +1,98 @@
+.card {
+    border-color: #f1f1f1;
+    @include border-radius(5);
+    
+    .card-header {
+        background-color: transparent;
+        border-bottom-color: #f1f1f1;
+        @include border-radius(5px 5px 0 0);
+
+        .card-title {
+            color: $primary-color-hover;
+            margin-bottom: 0;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    
+    }
+
+    .card-body {
+        .card-title{
+            font-size: 16px;
+            font-weight: $font-bold;
+            line-height: 25px;
+            color: $text-color;
+        }
+        .card-text{
+            color: $text-color-light;
+        }
+        @media (min-width:768px) {
+            .owl-carousel.owl-theme .owl-nav:not(.disabled) {
+                position: absolute;
+                top: -63px;
+                right: 0;
+                margin-top: 0;
+    
+                .owl-next,
+                .owl-prev {
+                    background-color: transparent !important;
+                    padding: 0 !important;
+                    border: 0;
+    
+                    .material-icons,
+                    i {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    .card-footer {
+        background-color: transparent;
+        border: 0;
+        @include border-radius(0);
+        text-align: center;
+
+        .btn-link {
+            color: $text-color;
+            display: block;
+            text-align: center;
+            padding: 0 10px 15px;
+            font-weight: $font-bold;
+            text-decoration: underline;
+        }
+    }
+
+    &.card-primary {
+        background-color: #DBDFEC;
+        border: 0;
+
+        .card-header {
+            border-bottom-color: #EBF0FF;
+        }
+
+        @media (min-width:768px) {
+            .card-body {
+                .owl-carousel.owl-theme .owl-nav:not(.disabled) {
+
+                    .owl-next,
+                    .owl-prev {
+                        color: $primary-color-hover;
+                    }
+                }
+            }
+        }
+
+
+        .card-footer {
+            .btn-link {
+                color: $primary-color-hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+#footer-main {
+    background-color: $footer-bg;
+    .socialmedia-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    
+        li {
+            padding: 5px;
+            
+            a {
+                display: block;
+                font-size: 18px;
+                color: $text-color;
+                padding: 5px 10px;
+                width: 25px;
+                height: 25px;
+                background-position: center center;
+                background-size:25px 25px;
+                background-repeat: no-repeat;
+                &.facebook{
+                    background-image: url('#{$img-path}facebook.png');
+                }
+                &.instagram{
+                    background-image: url('#{$img-path}instagram.png');
+                }
+                &.youtube{
+                    background-image: url('#{$img-path}youtube.png');
+                }
+                &.twitter{
+                    background-image: url('#{$img-path}twitter.png');
+                }
+                &.linkedin{
+                    background-image: url('#{$img-path}linkedin.png');
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+// main footer
+
+.copyright {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #3a3a3a;
+    text-align: center;
+    p{
+        margin-bottom: 0;
+        color: #FFFFFF;
+    }
+}
+
+// copyright 
+
+#move-to-top {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 90px;
+    right: 22px;
+    transition: all .45s ease, opacity .25s ease-in-out;
+    transform: translate3d(0, 300px, 0);
+    overflow: hidden;
+    border: 0;
+    z-index: 99;
+    background: transparent url('#{$img-path}arrow_top.png') center center no-repeat;
+    background-size: 40px 40px;
+
+    &.active {
+        transform: translate3d(0, 0, 0);
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    #move-to-top {
+        opacity: 0;
+        display: none !important;
+    }
+}
+
+// goto top

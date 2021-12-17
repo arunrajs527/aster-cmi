@@ -1,0 +1,22 @@
+main {
+    position: relative;
+    display: block;
+
+    &:after,
+    &:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.section-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-title{
+    margin-bottom: 35px;
+}
+
+

@@ -1,0 +1,55 @@
+
+.navbar {
+
+    @media (min-width:992px) {
+        padding-left: 0;
+        padding-right: 0;
+     }
+
+    .navbar-brand {
+        display: block;
+        max-width: 230px;
+
+        @media (max-width:991.98px) {
+            max-width: 160px;
+        }
+    }
+
+    @media (max-width:991.98px) {
+        .navbar-collapse {
+            border-top: 1px solid #eee;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-size: 15px;
+                line-height: 15px;
+                color: #fff;
+                font-weight: $font-regular;
+                display: block;
+                padding: 5px 15px;
+                text-align: center;
+
+            }
+
+            &:hover,
+            &:focus {
+                .nav-link {
+
+                }
+            }
+
+            &.active {
+                .nav-link {
+                  
+                }
+            }
+
+            @media (max-width:991.98px) {
+                margin: 10px 0;
+            }
+        }
+    }
+}

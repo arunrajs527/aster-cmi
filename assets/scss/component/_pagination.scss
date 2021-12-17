@@ -1,0 +1,43 @@
+.pagination {
+    margin-bottom: 0;
+
+    .page-item {
+        .page-link {
+            color: $text-color-light;
+            border: 0;
+            background-color: transparent;
+            padding: 8px 10px;
+            font-size: 14px;
+            font-weight: $font-bold;
+        }
+
+        &:hover,
+        &:focus {
+            .page-link {
+                @extend .text-primary;
+            }
+        }
+
+        &.active {
+            .page-link {
+                color: $text-color;
+            }
+        }
+    }
+
+    &-lg {
+        .page-item {
+            .page-link {
+                padding: 8px;
+            }
+        }
+    }
+
+    &-sm {
+        .page-item {
+            .page-link {
+                padding: 15px;
+            }
+        }
+    }
+}

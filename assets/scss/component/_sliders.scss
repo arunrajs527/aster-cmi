@@ -1,0 +1,254 @@
+.owl-carousel {
+    &.owl-theme {
+        .owl-nav {
+            &.disabled+.owl-dots {
+                margin-top: 40px;
+            }
+
+            &:not(.disabled) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 70px;
+                margin: 30px auto 0;
+
+                .owl-prev,
+                .owl-next {
+                    position: relative;
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                    padding: 7px 10px !important;
+                    top: 0;
+                    margin: 0;
+                    right: auto;
+                    left: auto;
+                    background-color: #fff;
+                    color: $text-color-light;
+                    font-size: 14px !important;
+                    line-height: 1;
+                    margin: 0;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #ccc;
+                    @include border-radius(50px);
+                }
+
+                .owl-prev {
+                    left: auto;
+                    right: auto;
+                }
+
+                [class*=owl-] {
+                    @include animate(all 0.4s ease);
+
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        background-color: $primary-color;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+
+
+        }
+
+        .owl-dots {
+            .owl-dot {
+                span {
+                    width: 8px;
+                    height: 8px;
+                    background-color: #C8C8C8;
+                    @include border-radius(8px);
+                    @include animate(all 0.4s ease);
+                    transition-delay: .2s;
+                }
+
+                &.active {
+                    span {
+                        width: 20px;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+        }
+        @media (min-width:992px){
+            &.single-slides {
+                .owl-nav {
+                    &:not(.disabled) {
+                        position: absolute;
+                        top: -40px;
+                        margin-top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.slider-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    [class*="slider-col"] {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    @media (min-width:992px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: normal;
+        justify-content: space-between;
+
+        .slider-col-1 {
+            flex: 1 1 83.5%;
+            width: 83.5%;
+            max-width: 83.5%;
+        }
+
+        .slider-col-2 {
+            flex: 1 1 calc(100% - 83.5%);
+            width: calc(100% - 83.5%);
+            max-width: calc(100% - 83.5%);
+            display: flex;
+            align-items: normal;
+        }
+    }
+
+    .posters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: normal;
+        margin: -10px;
+
+        [class*="poster-"] {
+            padding: 10px;
+            display: block;
+
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @include border-radius(5px);
+                }
+            }
+        }
+
+        @media (min-width:992px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            [class*="poster-"] {
+                height: 50%;
+
+                a {
+                    height: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+#main-slider {
+    &.owl-carousel {
+        &.owl-theme {
+            .owl-nav {
+                &:not(.disabled) {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    .owl-prev,
+                    .owl-next {
+                        position: absolute;
+                        display: flex;
+                        width: 30px;
+                        height: 30px;
+                        padding: 7px 10px !important;
+                        top: 0;
+                        margin: 0;
+                        right: auto;
+                        left: auto;
+                        background-color: #fff;
+                        color: $text-color-light;
+                        font-size: 14px !important;
+                        line-height: 1;
+                        margin: 0;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #ccc;
+                        @include border-radius(50px);
+                    }
+
+                    .owl-prev {
+                        left: 10px;
+                        right: auto;
+                    }
+
+                    .owl-next {
+                        left: auto;
+                        right: 10px;
+                    }
+
+                    [class*=owl-] {
+                        @include animate(all 0.4s ease);
+
+                        &:hover,
+                        &:focus {
+                            color: #fff;
+                            background-color: $primary-color;
+                            border-color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 20px;
+
+                .owl-dot {
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: rgba(#fff, 0.6);
+                        @include border-radius(10px);
+                    }
+
+                    &.active {
+                        span {
+                            width: 22px;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}

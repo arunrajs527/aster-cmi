@@ -1,0 +1,260 @@
+.tab-area {
+    .nav-tabs {
+        .nav-item {
+            @include animate(all 0.4s ease);
+        }
+    }
+
+    .tab-pane {
+        @include animate(all 0.4s ease);
+    }
+
+    &.tabs-with-line {
+        .nav-tabs {
+            border-bottom: 3px solid #C6C6C6;
+
+            .nav-item {
+                background-color: transparent;
+                border: 0;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1px;
+                color: $text-color;
+                font-weight: $font-bold;
+                margin-bottom: -3px;
+                padding: 10px 30px;
+                @include animate(all 0.4s ease);
+                border-bottom: 3px solid transparent;
+
+                &.active,
+                &:hover {
+                    color: $primary-color;
+                    border-bottom-color: $primary-color;
+                }
+            }
+
+            &.justify-content-between {
+                .nav-item {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .tab-pane {
+            padding: 25px 0 0;
+            text-align: left;
+        }
+    }
+
+    &.tabs-with-border {
+        .nav-tabs {
+            border-bottom: 1px solid #C6C6C6;
+
+            .nav-item {
+                background-color: transparent;
+                border: 1px solid #C6C6C6;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1px;
+                color: $text-color-light;
+                font-weight: $font-bold;
+                padding: 9px 20px;
+                margin-right: 5px;
+                @include border-radius(4px 4px 0 0);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active,
+                &:hover {
+                    color: $text-color;
+                    background-color: #f1f1f1;
+                }
+            }
+
+            @media (max-width:500px) and (orientation: portrait) {
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .nav-item {
+                    flex: 1 1 100%;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+                    @include border-radius(4px);
+                }
+            }
+        }
+
+        .tab-pane {
+            padding: 30px;
+            text-align: left;
+            border: 1px solid #C6C6C6;
+            border-top: 0;
+        }
+    }
+
+    &.tabs-vertical {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .nav-tabs {
+            width: 100%;
+            flex-direction: row;
+            border: 0;
+            flex-wrap: nowrap;
+
+            @media (max-width:500px) and (orientation: portrait) {
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .nav-item {
+                    flex: 1 1 100%;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+                    @include border-radius(4px);
+
+                    &.active {
+                        order: 1;
+                    }
+                }
+            }
+
+            @media (min-width:768px) {
+                min-width: 140px;
+                flex-direction: column;
+
+                .nav-item {
+                    margin-bottom: 5px;
+                    margin-right: 0;
+                    @include border-radius(4px 0 0 4px);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                text-align: left;
+                border-top: 1px solid #C6C6C6;
+
+                @media (min-width:768px) {
+                    margin-left: -1px;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+
+        @media (min-width: 768px) {
+            .tab-content {
+                flex-grow: 1;
+            }
+        }
+
+    }
+
+    &.tabs-boxed {
+        .nav-tabs {
+            border-bottom: 1px solid #C6C6C6;
+            display: flex;
+
+            .nav-item {
+                background-color: transparent;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1px;
+                color: $text-color-light;
+                font-weight: $font-bold;
+                padding: 10px 30px;
+                border: 1px solid #C6C6C6;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active,
+                &:hover {
+                    color: $primary-color;
+                }
+
+                @media(max-width:640px) {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    width: 100%;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    text-align: center;
+                    margin: 0;
+                    border-bottom: 0;
+
+                    &:last-child {
+                        border-width: 1px;
+                    }
+
+                    &.active {
+                        order: 1;
+                    }
+                }
+            }
+
+            @media (max-width:500px) and (orientation: portrait) {
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .nav-item {
+                    flex: 1 1 100%;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+                    @include border-radius(4px);
+                }
+            }
+        }
+
+        .tab-pane {
+            padding: 40px;
+            text-align: left;
+            border: 1px solid #C6C6C6;
+            border-top: 0;
+        }
+    }
+
+}
+
+.nav-pills{
+
+    .nav-link,  
+    .show>.nav-link{
+        font-size: 15px;
+        line-height: 15px;
+        @include border-radius(5px);
+
+        &:not(.active){
+            &:focus, &:hover, &:active{
+                background-color: $secondary-color-light;
+                color: $secondary-color-hover;
+            }
+        }
+
+        &.active{
+            background-color: $primary-color;
+            color: #fff;
+        }
+
+    }
+}

@@ -1,0 +1,99 @@
+#testimonials {
+    &.owl-carousel {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        .owl-stage-outer{
+            .owl-stage {
+                display: flex;
+    
+                .testimonials-item {
+                    padding: 30px 25px;
+                    display: flex;
+                    flex: 1 0 auto;
+                    height: 100%;
+    
+                    .testimony {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 30px;
+                        background-color: #fff;
+                        box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+                        @include border-radius(5px);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: stretch;
+    
+    
+                        figure {
+                            display: flex;
+                            margin-bottom: 15px;
+    
+                            img {
+                                display: block;
+                                flex: 0 0 66px;
+                                width: 66px;
+                                max-width: 66px;
+                                height: 66px;
+                                object-fit: contain;
+                            }
+    
+                            figcaption {
+                                position: relative;
+                                flex: 1 1 100%;
+                                width: 100%;
+                                max-width: 100%;
+                                padding-left: 20px;
+    
+                                h4,
+                                p {
+                                    margin-bottom: 0;
+                                    color: $text-color;
+                                }
+    
+                                h4 {
+                                    font-weight: $font-bolder;
+                                }
+    
+                                &:after {
+                                    position: absolute;
+                                    display: block;
+                                    content: '';
+                                    left: 20px;
+                                    bottom: 0;
+                                    width: 30px;
+                                    height: 1px;
+                                    background-color: #E5EAFF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .owl-nav:not(.disabled){
+            width: 100%;
+            margin: 0 auto 0 0;
+            justify-content: flex-end;
+            [class*="owl-"]{
+                border: 0;
+                width: 23px;
+                height: 16px;
+                background-color: transparent;
+                padding: 0 !important;
+                margin: 0 10px;
+            }
+            .left-arrow, .right-arrow{
+                width: 23px;
+                height: 16px;
+                background:transparent url('#{$img-path}carousel_arrow.png') center center no-repeat;
+                background-size: 23px 16px;
+            }
+            .left-arrow{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+
+}

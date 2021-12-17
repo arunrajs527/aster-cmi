@@ -1,0 +1,60 @@
+.badge {
+    font-size: 12px;
+    padding-right: 8px;
+    padding-left: 8px;
+    line-height: 22px;
+    border: 0;
+    background-color: transparent;
+    color: $text-color-light;
+    @include border-radius(6px);
+
+    &.badge-primary {
+        background-color: $btn-primary-normal;
+        color: $btn-primary-default-text-color;
+    }
+
+    &.badge-secondary {
+        background-color: $btn-secondary-normal;
+        color: $btn-secondary-default-text-color;
+    }
+
+    &.badge-success {
+        background-color: $btn-success-normal;
+        color: $btn-success-default-text-color;
+    }
+
+    &.badge-info {
+        background-color: $btn-info-normal;
+        color: $btn-info-default-text-color;
+    }
+
+    &.badge-warning {
+        background-color: $btn-warning-normal;
+        color: $btn-warning-default-text-color;
+    }
+
+    &.badge-danger {
+        background-color: $btn-danger-normal;
+        color: $btn-danger-default-text-color;
+    }
+
+    &.badge-light {
+        background-color: $btn-light-normal;
+        color: $btn-light-default-text-color;
+    }
+
+    &.badge-dark {
+        background-color: $btn-dark-hover;
+        color: $btn-dark-default-text-color;
+    }
+
+    &.badge-sm {
+        font-size: 11px;
+    }
+
+    &.badge-lg {
+        font-size: 16px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}

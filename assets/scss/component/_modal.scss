@@ -1,0 +1,94 @@
+.modal-content {
+    border: 0;
+    @include border-radius(0);
+
+    .modal-header {
+        position: relative;
+        background-color: #fff;
+        text-align: center;
+        border-bottom: 0;
+
+        .modal-title {
+            font-size: 20px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .close {
+            position: absolute;
+            display: inline-block;
+            font-size: 0;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            right: 10px;
+            opacity: 1 !important;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            background-size: 19px 19px;
+            background-image: url('#{$img-path}close-btn.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            @include animate(all 0.4s ease);
+            z-index: 5;
+
+            &:hover,
+            &:focus {
+                background-image: url('#{$img-path}close-btn-active.png');
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 25px;
+
+        img {
+            width: 100%;
+        }
+
+        .form-control-lg {
+            background-color: transparent;
+            border: 1px solid rgba(#000, 0.2);
+            height: 70px;
+        }
+
+        .btn-with-icon-image {
+            img {
+                max-width: 22px;
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+
+        .accept-btn {
+            display: inline-block;
+        }
+    }
+
+    .modal-footer {
+        padding: 0 25px 25px 25px;
+        border: 0;
+        flex-wrap: nowrap;
+
+        button,
+        a {
+            margin: 0;
+        }
+    }
+}
+
+#quickView {
+    @media (max-width: 1200px) {
+        .modal-dialog {
+            max-width: 100%;
+        }
+    }
+}
+
+.zoom-img-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    zoom: 100%;
+}
